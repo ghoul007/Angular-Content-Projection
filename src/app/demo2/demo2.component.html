@@ -1,0 +1,6 @@
+<h2> Example with NgTemplateOutlet </h2>
+
+<button (click)="enable=!enable" >Show</button>
+<ng-container *ngIf="enable">
+	<ng-container *ngTemplateOutlet="content"></ng-container>
+</ng-container>
