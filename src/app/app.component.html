@@ -1,16 +1,14 @@
 <app-demo1>
-<app-nested-content></app-nested-content>
+	<app-nested-content></app-nested-content>
 </app-demo1>
 
 
 <hr>
 
 
-<app-demo2 [content]='nestedContentRef' >
-</app-demo2>
+<app-demo2 [content]='nestedContentRef'></app-demo2>
 
 
-<ng-template #nestedContentRef >
-<app-nested-content  ></app-nested-content>
+<ng-template #nestedContentRef>
+	<app-nested-content></app-nested-content>
 </ng-template>
-

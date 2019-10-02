@@ -1,27 +1,19 @@
-# Ttt
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.7.
+## Content projection
+Content projection is a way to import HTML content from outside the component and insert that content into the component’s template in a designated spo
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## The problem ( When using NG-Content )
 
-## Code scaffolding
+ The problem is that 'nested' components are immediately initialized and not destroyed when removed from DOM.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Solution ( Using template outlet )
 
-## Build
+```js
+<app-demo2 [content]='nestedContentRef'></app-demo2>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+<ng-template #nestedContentRef>
+	<app-nested-content></app-nested-content>
+</ng-template>
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
