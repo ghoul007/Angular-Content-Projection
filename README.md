@@ -17,3 +17,6 @@ Content projection is a way to import HTML content from outside the component an
 </ng-template>
 
 ```
+
+
+[example with loader](https://stackblitz.com/edit/angular-dscswb)
